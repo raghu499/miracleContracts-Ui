@@ -37,7 +37,9 @@ export class HomePageComponent implements OnInit {
       zipCode: ['', Validators.required]
     });
     this.thirdFormGroup = this._formBuilder.group({
-      thirdCtrl: ['', Validators.required]
+      RenewalType: ['', Validators.required],
+      RenewalTermLength: ['', Validators.required],
+      RenewalNotice: ['', Validators.required]
     });
     this.fourthFormGroup = this._formBuilder.group({
       fourthCtrl: ['', Validators.required]
@@ -47,4 +49,16 @@ export class HomePageComponent implements OnInit {
   addContracts() {
     this.newContract = true;
   }
+
+  foods: Food[] = [
+    {value: 'steak-0', viewValue: 'Category 1'},
+    {value: 'pizza-1', viewValue: 'Category 2'},
+    {value: 'tacos-2', viewValue: 'Category 3'}
+  ];
+}
+
+
+export interface Food {
+  value: string;
+  viewValue: string;
 }
