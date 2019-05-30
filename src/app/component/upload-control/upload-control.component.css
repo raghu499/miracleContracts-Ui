@@ -1,0 +1,72 @@
+.text-dec{
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    /* margin-left: 43px; */
+
+  }
+
+  .upload-btn-wrapper input[type=file] {
+    /* font-size: 100px; */
+    position: absolute;
+    /* left: 0; */
+    top: 0;
+    opacity: 0;
+    width: 150px;
+    height: 36px;
+    /* margin-left: 43px; */
+  }
+
+  .drop-zone {
+    margin: auto !important;
+    height: 60px !important;
+    border: 2px dotted grey !important;
+    border-radius: 30px !important;
+    max-width: 100% !important;
+}
+
+.submit-btn{
+    width: 150px;
+    height: 36px;
+    /* margin: 0px 0px 20px 0px; */
+    /* margin-right: 43px; */
+    background-color: #242829;
+    color: #FFFFFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+  
+  }
+
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* IE10+ specific styles go here */
+
+
+  .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    /* margin-left: 43px; */
+
+  }
+
+  .upload-btn-wrapper input[type=file] {
+    /* font-size: 100px; */
+    position: absolute;
+    /* left: 0; */
+    top: 0;
+    opacity: 0;
+    width: 150px;
+    height: 36px;
+    left: 42px;
+  }
+}

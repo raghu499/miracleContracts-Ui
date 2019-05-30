@@ -50,13 +50,13 @@
               <input placeholder="No more than 50 characters" type="text" formControlName="description" class="textField input-text">
             </div>
             <mat-form-field>
-                <mat-label class="contractStyle">Contract Type</mat-label>
-                <mat-select>
-                  <mat-option *ngFor="let food of foods" [value]="food.value">
-                    {{food.viewValue}}
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
+              <mat-label class="contractStyle">Contract Type</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
             <p class="contractStyle">Spend($)</p>
             <div class="content">
               <input placeholder="Enter amount in $" type="text" formControlName="Spend" class="textField input-text">
@@ -117,12 +117,12 @@
       <ng-template matStepLabel>
         <p class="fontStyle">Details</p>
       </ng-template>
+
       <div fxLayoutAlign="center">
         <div class="login-content" fxLayout="row" fxLayoutAlign="space-around">
           <div fxLayout="column" fxLayoutAlign="stretch" class="left">
-
             <mat-form-field>
-              <mat-label class="contractStyle">Category</mat-label>
+              <mat-label>Category</mat-label>
               <mat-select>
                 <mat-option *ngFor="let food of foods" [value]="food.value">
                   {{food.viewValue}}
@@ -131,7 +131,7 @@
             </mat-form-field>
 
             <mat-form-field>
-              <mat-label class="contractStyle">Sub Category</mat-label>
+              <mat-label>Sub Category</mat-label>
               <mat-select>
                 <mat-option *ngFor="let food of foods" [value]="food.value">
                   {{food.viewValue}}
@@ -143,24 +143,41 @@
             <div class="content">
               <input type="text" formControlName="RenewalType" class="textField input-text">
             </div>
-          </div>
-          <div fxLayout="column" fxLayoutAlign="stretch" class="right">
+
             <p class="contractStyle">Renewal Term Length</p>
             <div class="content">
               <input type="text" formControlName="RenewalTermLength" class="textField input-text">
             </div>
+
             <p class="contractStyle">Renewal Notice Period</p>
             <div class="content">
-              <input type="text" formControlName="RenewalNotice" class="textField input-text">
+              <input type="text" formControlName="RenewalTermLength" class="textField input-text">
             </div>
+
+          </div>
+          <div fxLayout="column" fxLayoutAlign="stretch" class="right">
+
             <mat-form-field>
-              <mat-label class="contractStyle">Termination</mat-label>
+              <mat-label>Termination</mat-label>
               <mat-select>
                 <mat-option *ngFor="let food of foods" [value]="food.value">
                   {{food.viewValue}}
                 </mat-option>
               </mat-select>
             </mat-form-field>
+            <p class="contractStyle">Cure Provisions</p>
+            <div class="content">
+              <input type="text" formControlName="Provisions" class="textField input-text">
+            </div>
+            <p class="contractStyle">Cure Period</p>
+            <div class="content">
+              <input type="text" formControlName="Period" class="textField input-text">
+            </div>
+            <p class="contractStyle">Cure Description</p>
+            <div class="content">
+              <input type="text" formControlName="Description" class="textField input-text">
+            </div>
+
           </div>
         </div>
       </div>
@@ -175,10 +192,42 @@
       <ng-template matStepLabel>
         <p class="fontStyle">Approval</p>
       </ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Address" formControlName="fourthCtrl" required>
-      </mat-form-field>
-      <div>
+      <div fxLayoutAlign="center">
+        <div class="login-content" fxLayout="row" fxLayoutAlign="space-around">
+          <div fxLayout="column" fxLayoutAlign="stretch" class="left">
+            <mat-form-field>
+              <mat-label  class="textField">Level 1 Approver</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let food of approve" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label  class="textField">Level 2 Approver</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let food of approve" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label  class="textField">Level 3 Approver</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let food of approve" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="stretch" class="right">
+
+            <app-upload-control class="file"></app-upload-control>
+
+          </div>
+        </div>
+      </div>
+      <div fxLayoutAlign="center">
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
       </div>

@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainDashboardComponent } from './component/main-dashboard/main-dashboard.component';
 import { HomePageComponent } from './component/home-page/home-page.component';
 import { ContactsPageComponent } from './component/contacts-page/contacts-page.component';
+import { UploadControlComponent } from './component/upload-control/upload-control.component';
+import { FileDropModule } from 'ngx-file-drop';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { ContactsPageComponent } from './component/contacts-page/contacts-page.c
     LoginComponent,
     MainDashboardComponent,
     HomePageComponent,
-    ContactsPageComponent
+    ContactsPageComponent,
+    UploadControlComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { ContactsPageComponent } from './component/contacts-page/contacts-page.c
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatSelectModule,
+    FileDropModule,
     MatStepperModule
   ],
   providers: [],

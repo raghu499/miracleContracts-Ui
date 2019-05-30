@@ -39,7 +39,10 @@ export class HomePageComponent implements OnInit {
     this.thirdFormGroup = this._formBuilder.group({
       RenewalType: ['', Validators.required],
       RenewalTermLength: ['', Validators.required],
-      RenewalNotice: ['', Validators.required]
+      RenewalNotice: ['', Validators.required],
+      Provisions: ['', Validators.required],
+      Period:['', Validators.required],
+      Description: ['', Validators.required]
     });
     this.fourthFormGroup = this._formBuilder.group({
       fourthCtrl: ['', Validators.required]
@@ -55,10 +58,23 @@ export class HomePageComponent implements OnInit {
     {value: 'pizza-1', viewValue: 'Category 2'},
     {value: 'tacos-2', viewValue: 'Category 3'}
   ];
+  approve: approver[] = [
+    {value: 'steak-0', viewValue: 'approve level 1'},
+    {value: 'pizza-1', viewValue: 'approve level 2'},
+    {value: 'tacos-2', viewValue: 'approve level 3'}
+  ];
+
+
 }
 
 
 export interface Food {
+  value: string;
+  viewValue: string;
+}
+
+
+export interface approver{
   value: string;
   viewValue: string;
 }

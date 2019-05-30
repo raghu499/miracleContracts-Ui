@@ -1,0 +1,27 @@
+<div fxFlex="100" class="form-control" fxLayoutGap="10px" fxLayout="column">
+    <file-drop style="padding:0px 50px 0px 50px" class="form-control" (onFileDrop)="dropped($event)">
+      <div fxLayout="column" fxLayoutGap="10px">
+        <div fxLayoutAlign="center center">
+          <mat-icon style="color: dodgerblue">cloud_upload</mat-icon>
+        </div>
+        <span fxLayoutAlign="center center">Drag and Drop your files here</span>
+        <div fxLayoutAlign="center center">
+          <span>Or</span>
+        </div>
+        <div fxLayoutAlign="center center" class="upload-btn-wrapper">
+          <button class="submit-btn">Choose Attchment</button>
+          <input  type="file" style="cursor: pointer;" name="myfile" (change)="onFileChange($event)" />
+        </div>
+        <span style="max-width: 500px;word-break: break-all;" fxLayoutAlign="center center" *ngIf="files.length==0">{{onChangeFileName}}</span>
+        <span style="max-width: 500px;word-break: break-all;" fxLayoutAlign="center center" *ngIf="files.length>0">{{files[0].relativePath}}</span>
+      </div>
+    </file-drop>
+    <mat-error *ngIf=errorMsg fxLayoutAlign = "center center" class="text-dec">
+      Only Files of type (docx, pdf, png, jpg, doc, xls, xlsx ) are allowed to be uploaded.
+    </mat-error>
+    <mat-error *ngIf=notvalidDocumentSize fxLayoutAlign = "center center" class="text-dec">
+      Maximum file size of 25 MB is only allowed to be uploaded.
+    </mat-error>
+  </div>
+  
+  
