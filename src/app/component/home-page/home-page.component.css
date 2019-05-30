@@ -17,3 +17,9 @@
     margin-top: -3px;
     padding-right:10px;
 }
+
+.fontStyle{
+    font-family: 'Open Sans', sans-serif;
+    color: #569BBD; 
+    font-weight: bold;
+}

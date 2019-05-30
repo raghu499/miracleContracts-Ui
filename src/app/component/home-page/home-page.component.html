@@ -9,7 +9,7 @@
 <mat-horizontal-stepper *ngIf="newContract" [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel>Contract</ng-template>
+        <ng-template matStepLabel><p class="fontStyle">Contract</p></ng-template>
         <mat-form-field>
           <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
         </mat-form-field>
@@ -20,7 +20,7 @@
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">
       <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>Address</ng-template>
+        <ng-template matStepLabel><p class="fontStyle">Address</p></ng-template>
         <mat-form-field>
           <input matInput placeholder="Address" formControlName="secondCtrl" required>
         </mat-form-field>
@@ -32,7 +32,7 @@
     </mat-step>
     <mat-step [stepControl]="thirdFormGroup">
         <form [formGroup]="thirdFormGroup">
-          <ng-template matStepLabel>Details</ng-template>
+          <ng-template matStepLabel><p class="fontStyle">Details</p></ng-template>
           <mat-form-field>
             <input matInput placeholder="Address" formControlName="thirdCtrl" required>
           </mat-form-field>
@@ -44,7 +44,7 @@
       </mat-step>
       <mat-step [stepControl]="fourthFormGroup">
           <form [formGroup]="fourthFormGroup">
-            <ng-template matStepLabel>Approval</ng-template>
+            <ng-template matStepLabel><p class="fontStyle">Approval</p></ng-template>
             <mat-form-field>
               <input matInput placeholder="Address" formControlName="fourthCtrl" required>
             </mat-form-field>
