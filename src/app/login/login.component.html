@@ -1,16 +1,24 @@
-<div fxFlex fxLayout="row" fxLayoutAlign="center center" style="margin-top: 95px;">
+<mat-toolbar >
+  <mat-toolbar-row class="header-row" fxLayout="row">
+    <div>
+      <img src="assets/images/mss_black.PNG" alt="" style="height:69px;" class="logo">
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!-- <div fxFlex fxLayout="row" fxLayoutAlign="center center" style="margin-top: 95px;">
   <p class="welcomeText">Hello!</p>
-</div>
+</div> -->
 
 <div fxFlex fxLayout="row" fxLayoutAlign="center center" class="main-content">
   <div class="login-content" fxLayout="column" fxLayoutAlign="start center">
-      <div fxShow="!isLoginSuccess" class="error">
-            <span>{{message}}</span>
-      </div>
+    <div fxShow="!isLoginSuccess" class="error">
+      <span>{{message}}</span>
+    </div>
     <form [formGroup]="userForm">
       <div fxLayout="column" fxLayoutAlign="space-evenly center" style="height: 200px;">
         <div class="login_content">
-          <input placeholder="Email Address" type="email" formControlName="loginID" tabindex="1" class="email input-text" value="" autocomplete="off">
+          <input placeholder="Email Address" type="email" formControlName="loginID" tabindex="1" class="email input-text" value=""
+            autocomplete="off">
           <!-- <mat-icon>person</mat-icon> -->
         </div>
         <div class="login_content">
@@ -35,3 +43,10 @@
     <a (click)="forgotPasswordPage()" class="forgotPassword"> Forgot Password?</a>
   </div>
 </div>
+<mat-toolbar class="footer-content">
+    <mat-toolbar-row fxLayoutAlign="center center">
+      <div fxLayout="column">
+      <div class="footer-text"><mat-icon>copyright_sharp</mat-icon> 2019 Miracle Software Systems, Inc.</div>
+      </div>
+    </mat-toolbar-row>
+</mat-toolbar>
