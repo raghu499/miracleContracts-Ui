@@ -3,15 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainDashboardComponent } from './component/main-dashboard/main-dashboard.component';
 import { MasterComponent } from './master/master.component';
 import { LoginComponent } from './login/login.component';
+import { HomePageComponent } from './component/home-page/home-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
-    path: 'home',
+    path: 'login',
     component: LoginComponent,
     children: [
      
@@ -22,12 +23,8 @@ const routes: Routes = [
     component: MasterComponent,
     children: [
       {
-        path: 'dashboard',
-        component: MainDashboardComponent,
-      },
-      {
         path: 'homePage',
-        component: MainDashboardComponent,
+        component: HomePageComponent,
       }
     ]
   }

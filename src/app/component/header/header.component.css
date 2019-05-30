@@ -48,3 +48,8 @@
 .iconClick{
     cursor: pointer;
 }
+.logoutClick{
+    margin-top:-1px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}

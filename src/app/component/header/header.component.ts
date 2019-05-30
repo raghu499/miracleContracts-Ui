@@ -18,11 +18,11 @@ export class HeaderComponent implements OnInit {
   }
 
   contactUsPage(){
-    this.router.navigate(['/homePage']);
+    this.router.navigate(['/contactUsPage']);
   }
 
   logOutPage(){
-    this.router.navigate(['/homePage']);
+    this.router.navigate(['/logOutPage']);
   }
 
 }

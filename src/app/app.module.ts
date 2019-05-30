@@ -12,6 +12,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainDashboardComponent } from './component/main-dashboard/main-dashboard.component';
+import { HomePageComponent } from './component/home-page/home-page.component';
+import { ContactsPageComponent } from './component/contacts-page/contacts-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MainDashboardComponent } from './component/main-dashboard/main-dashboar
     FooterComponent,
     MasterComponent,
     LoginComponent,
-    MainDashboardComponent
+    MainDashboardComponent,
+    HomePageComponent,
+    ContactsPageComponent
   ],
   imports: [
     BrowserModule,
