@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   reEmail = new RegExp(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/);
   user: any;
 
-  constructor(  private formBuilder: FormBuilder, private router: Router,) { 
+  constructor(  private formBuilder: FormBuilder, private router: Router) { 
     this.userForm = formBuilder.group({
       loginID: new FormControl('', [
         Validators.required,

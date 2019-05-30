@@ -3,5 +3,25 @@
     <div>
       <img src="assets/images/mss_black.PNG" alt="" style="height:69px;" class="logo">
     </div>
+    <div class="searchBarHeader" *ngIf="globalSearch">
+      <input [(ngModel)]='searchBar' type="text" (ngModelChange)='searchChange(searchBar)' class="search-input someinput" placeholder="Search for a keyword"
+        (keydown.enter)="onKeydown($event)" name="searchBarField" #searchBarField="ngModel" [maxlength]="30" fxLayoutWrap>
+      <img class="search-icon" (click)="onKeydown($event)" src="assets/images/search.png">
+    </div>
+
+    <div class="icon" fxLayout="row" fxLayoutGap="35px">
+      <div fxLayout="column">
+          <mat-icon (click)="homePage()" class="iconClick">home</mat-icon>
+          <p class="iconText">Home</p>
+      </div>  
+      <div fxLayout="column">
+        <mat-icon (click)="contactUsPage()" class="iconClick">call</mat-icon>
+        <p class="iconText">Contact Us</p>
+      </div>  
+      <div fxLayout="column">
+          <mat-icon (click)="logOutPage()" class="iconClick">logout</mat-icon>
+          <p class="iconText">Logout</p>
+      </div>  
+    </div>
   </mat-toolbar-row>
-</mat-toolbar>    
+</mat-toolbar>

@@ -5,9 +5,6 @@ import { MasterComponent } from './master/master.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  // { path: 'dashboard', component: MainDashboardComponent },
-
-
   {
     path: '',
     redirectTo: 'home',
@@ -27,8 +24,12 @@ const routes: Routes = [
       {
         path: 'dashboard',
         component: MainDashboardComponent,
-       
-      }]
+      },
+      {
+        path: 'homePage',
+        component: MainDashboardComponent,
+      }
+    ]
   }
 ];
 

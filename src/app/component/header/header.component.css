@@ -6,3 +6,45 @@
 .logo{
     width: 70%;
 }
+.searchBarHeader {
+    margin-left: 120px;
+}
+
+.search-icon {
+	height: 30px;
+	position: relative;
+	left: -35px;
+	top: 8px;
+	line-height: 10px;
+}
+
+.search-input{
+    width:841px;
+    height: 30px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    padding-left:20px;
+}
+
+.someinput::-ms-clear {
+	display: none;
+}
+
+.material-icons {
+    font-size: 44px;
+    margin-top: 19px;
+}
+
+.iconText{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.icon{
+    padding-left:100px;
+}
+
+.iconClick{
+    cursor: pointer;
+}
