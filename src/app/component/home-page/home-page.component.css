@@ -23,3 +23,31 @@
     color: #569BBD; 
     font-weight: bold;
 }
+
+.login-content{
+    width: 70%;
+    border: 2px solid #D0D2D3;
+    box-shadow:5px 1px 10px 1px #cccbcb;
+    height: 400px; 
+    background-color: #FFFF;
+    border-radius:1px;
+}
+
+.contractStyle{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.textField{
+    width: 400px;
+    height: 25px;
+}
+
+.left{
+    padding-left:10px;
+}
+
+.input-text{
+    padding-left:3px;
+}

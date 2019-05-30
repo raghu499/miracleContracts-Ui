@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home-page',
@@ -11,17 +11,30 @@ export class HomePageComponent implements OnInit {
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
-  thirdFormGroup : FormGroup;
-  fourthFormGroup : FormGroup;
+  thirdFormGroup: FormGroup;
+  fourthFormGroup: FormGroup;
 
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
+      contractName: ['', Validators.required],
+      validityDate: ['', Validators.required],
+      firstName: ['', Validators.required],
+      lastName:  ['', Validators.required],
+      middleName: [''],
+      terms:  ['', Validators.required],
+      description: ['', Validators.required],
+      contractType: ['', Validators.required],
+      Spend: ['', Validators.required],
+      Owner:['', Validators.required]
     });
     this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
+      Address1: ['', Validators.required],
+      Address2: ['', Validators.required],
+      State: ['', Validators.required],
+      City: ['', Validators.required],
+      zipCode: ['', Validators.required]
     });
     this.thirdFormGroup = this._formBuilder.group({
       thirdCtrl: ['', Validators.required]
@@ -31,7 +44,7 @@ export class HomePageComponent implements OnInit {
     });
   }
 
-  addContracts(){
+  addContracts() {
     this.newContract = true;
   }
 }

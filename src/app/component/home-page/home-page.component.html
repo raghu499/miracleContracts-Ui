@@ -3,58 +3,142 @@
   <span class="heading" *ngIf="newContract">New Contract</span>
 </div>
 <div fxLayout="row" fxLayoutAlign="end start">
-  <button  mat-button class="addContracts" (click)="addContracts()"><mat-icon class="addIcon">add_circle</mat-icon>Add Contracts</button>
+  <button mat-button class="addContracts" (click)="addContracts()">
+    <mat-icon class="addIcon">add_circle</mat-icon>Add Contracts</button>
 </div>
 
 <mat-horizontal-stepper *ngIf="newContract" [linear]="isLinear" #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel><p class="fontStyle">Contract</p></ng-template>
-        <mat-form-field>
-          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="secondFormGroup">
-      <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel><p class="fontStyle">Address</p></ng-template>
-        <mat-form-field>
-          <input matInput placeholder="Address" formControlName="secondCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="thirdFormGroup">
-        <form [formGroup]="thirdFormGroup">
-          <ng-template matStepLabel><p class="fontStyle">Details</p></ng-template>
-          <mat-form-field>
-            <input matInput placeholder="Address" formControlName="thirdCtrl" required>
-          </mat-form-field>
-          <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-          </div>
-        </form>
-      </mat-step>
-      <mat-step [stepControl]="fourthFormGroup">
-          <form [formGroup]="fourthFormGroup">
-            <ng-template matStepLabel><p class="fontStyle">Approval</p></ng-template>
-            <mat-form-field>
-              <input matInput placeholder="Address" formControlName="fourthCtrl" required>
-            </mat-form-field>
-            <div>
-              <button mat-button matStepperPrevious>Back</button>
-              <button mat-button matStepperNext>Next</button>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>
+        <p class="fontStyle">Contract</p>
+      </ng-template>
+      <div fxLayoutAlign="center">
+        <div class="login-content" fxLayout="row" fxLayoutAlign="space-around">
+          <div fxLayout="column" fxLayoutAlign="stretch"  class="left">
+            <p class="contractStyle">Contract Name</p>
+            <div class="content">
+              <input placeholder="No more than 50 characters" type="text" formControlName="contractName" class="textField input-text" autocomplete="off">
             </div>
-          </form>
-        </mat-step>
-    <!-- <mat-step>
+            <p class="contractStyle">Validity Date</p>
+            <div class="content">
+              <input placeholder="Choose a date" type="date" formControlName="validityDate" class="textField input-text">
+            </div>
+            <p class="contractStyle">First Name</p>
+            <div class="content">
+              <input placeholder="No more than 50 characters" type="text" formControlName="firstName" class="textField input-text">
+            </div>
+            <p class="contractStyle">Last Name</p>
+            <div class="content">
+              <input placeholder="No more than 50 characters" type="text" formControlName="lastName" class="textField input-text">
+            </div>
+
+            <p class="contractStyle">Middle Name</p>
+            <div class="content">
+              <input placeholder="No more than 50 characters" type="text" formControlName="middleName" class="textField input-text">
+            </div>
+
+          </div>
+          <div fxLayout="column" fxLayoutAlign="stretch"  class="right">
+
+            <p class="contractStyle">Terms</p>
+            <div class="content">
+              <input placeholder="No more than 50 characters" type="text" formControlName="terms" class="textField input-text">
+            </div>
+            <p class="contractStyle">Description</p>
+            <div class="content">
+              <input placeholder="No more than 50 characters" type="text" formControlName="description" class="textField input-text">
+            </div>
+            <p class="contractStyle">Contract Type</p>
+            <div class="content">
+              <input placeholder="No more than 50 characters" type="select" formControlName="contractType" class="textField input-text">
+            </div>
+            <p class="contractStyle">Spend($)</p>
+            <div class="content">
+              <input placeholder="Enter amount in $" type="text" formControlName="Spend" class="textField input-text">
+            </div>
+            <p class="contractStyle">Owner</p>
+            <div class="content">
+              <input placeholder="No more than 50 characters" type="text" formControlName="Owner" class="textField input-text">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxLayoutAlign="center">
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>
+        <p class="fontStyle">Address</p>
+      </ng-template>
+      <div fxLayoutAlign="center">
+          <div class="login-content" fxLayout="row" fxLayoutAlign="space-around">
+            <div fxLayout="column" fxLayoutAlign="stretch"  class="left">
+              <p class="contractStyle">Address 1</p>
+                <div class="content">
+                  <input type="text" formControlName="Address1" class="textField input-text">
+                </div>
+                <p class="contractStyle">Address 2</p>
+                <div class="content">
+                  <input type="text" formControlName="Address2" class="textField input-text">
+                </div>
+                <p class="contractStyle">State</p>
+                <div class="content">
+                  <input type="text" formControlName="State" class="textField input-text">
+                </div>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="stretch"  class="right">
+                <p class="contractStyle">City</p>
+                <div class="content">
+                  <input type="text" formControlName="City" class="textField input-text">
+                </div>
+                <p class="contractStyle">Zip Code</p>
+                <div class="content">
+                  <input type="text" formControlName="zipCode" class="textField input-text">
+                </div>
+            </div>
+          </div>
+  </div>
+      
+      
+      <div fxLayoutAlign="center">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>
+        <p class="fontStyle">Details</p>
+      </ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Address" formControlName="thirdCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="fourthFormGroup">
+    <form [formGroup]="fourthFormGroup">
+      <ng-template matStepLabel>
+        <p class="fontStyle">Approval</p>
+      </ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Address" formControlName="fourthCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <!-- <mat-step>
       <ng-template matStepLabel>Done</ng-template>
       You are now done.
       <div>
@@ -62,4 +146,4 @@
         <button mat-button (click)="stepper.reset()">Reset</button>
       </div>
     </mat-step> -->
-  </mat-horizontal-stepper>
+</mat-horizontal-stepper>
