@@ -4,3 +4,16 @@
     font-size: 16px;
     font-weight: bold;
 }
+.addContracts{
+    width: 153px;
+    height: 40px;
+    background-color: #569BBD;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    margin-right: 20px;
+}
+.addIcon{
+    margin-top: -3px;
+    padding-right:10px;
+}

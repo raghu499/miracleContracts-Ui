@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
-import {MatToolbarModule, MatIconModule, MatCheckboxModule,MatInputModule} from '@angular/material';
+import {MatToolbarModule, MatIconModule, MatCheckboxModule,MatInputModule,MatButtonModule} from '@angular/material';
 import { FooterComponent } from './footer/footer.component';
 import { MasterComponent } from './master/master.component';
 import { FormsModule } from '@angular/forms';
@@ -36,6 +36,7 @@ import { ContactsPageComponent } from './component/contacts-page/contacts-page.c
     MatCheckboxModule,
     MatInputModule,
     FlexLayoutModule,
+    MatButtonModule,
     BrowserAnimationsModule
   ],
   providers: [],
