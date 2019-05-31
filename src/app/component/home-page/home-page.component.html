@@ -196,7 +196,7 @@
         <div class="login-content" fxLayout="row" fxLayoutAlign="space-around">
           <div fxLayout="column" fxLayoutAlign="stretch" class="left">
             <mat-form-field>
-              <mat-label  class="textField">Level 1 Approver</mat-label>
+              <mat-label  class="approverTextField">Level 1 Approver</mat-label>
               <mat-select>
                 <mat-option *ngFor="let food of approve" [value]="food.value">
                   {{food.viewValue}}
@@ -204,7 +204,7 @@
               </mat-select>
             </mat-form-field>
             <mat-form-field>
-              <mat-label  class="textField">Level 2 Approver</mat-label>
+              <mat-label  class="approverTextField">Level 2 Approver</mat-label>
               <mat-select>
                 <mat-option *ngFor="let food of approve" [value]="food.value">
                   {{food.viewValue}}
@@ -212,7 +212,7 @@
               </mat-select>
             </mat-form-field>
             <mat-form-field>
-              <mat-label  class="textField">Level 3 Approver</mat-label>
+              <mat-label  class="approverTextField">Level 3 Approver</mat-label>
               <mat-select>
                 <mat-option *ngFor="let food of approve" [value]="food.value">
                   {{food.viewValue}}
