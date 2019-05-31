@@ -19,7 +19,7 @@
 }
 
 .search-input{
-    width:841px;
+    width:610px;
     height: 30px;
     border: none;
     font-family: 'Open Sans', sans-serif;
@@ -42,7 +42,9 @@
 }
 
 .icon{
-    padding-left:100px;
+    right: 0;
+    padding-right:20px !important;
+    position: fixed;
 }
 
 .iconClick{
@@ -52,4 +54,12 @@
     margin-top:-1px;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
+}
+
+.searchBox{
+    width:641px;
+}
+
+.searchLargeBox{
+    width:900px;
 }

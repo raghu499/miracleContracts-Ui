@@ -1,10 +1,12 @@
 <mat-toolbar>
   <mat-toolbar-row class="header-row" fxLayout="row">
-    <div>
+    <div fxFlex.lg="20%" fxFlex.xl="20%">
       <img src="assets/images/logo.png" alt="" style="height:56px;" class="logo">
     </div>
-    <div class="searchBarHeader" *ngIf="globalSearch">
-      <input [(ngModel)]='searchBar' type="text" (ngModelChange)='searchChange(searchBar)' class="search-input someinput" placeholder="Search for a keyword"
+
+    <!-- class="searchBarHeader" -->
+    <div *ngIf="globalSearch">
+      <input [(ngModel)]='searchBar' type="text" (ngModelChange)='searchChange(searchBar)' ngClass.lg="searchBox"   ngClass.xl="searchLargeBox"class="search-input someinput" placeholder="Search for a keyword"
         (keydown.enter)="onKeydown($event)" name="searchBarField" #searchBarField="ngModel" [maxlength]="30" fxLayoutWrap>
       <img class="search-icon" (click)="onKeydown($event)" src="assets/images/search.png">
     </div>
