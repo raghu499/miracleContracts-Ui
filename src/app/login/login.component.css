@@ -15,7 +15,13 @@
     border-radius:1px;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 .login_content{
+    width:376px;
+    height: 42px;
     box-shadow:5px 1px 8px 1px #cccbcb;
     border-radius:1px;
     margin-top: 20px;
@@ -30,15 +36,15 @@
     color: #FFFF; 
 }
 .email{
-    width: 376px ;
-    height: 42px;
+    /* width: 376px ;
+    height: 42px; */
     line-height: 10px;
     padding-left:10px;
 }
 
 .password{
-    width: 376px;
-    height: 42px;
+    /* width: 376px;
+    height: 42px; */
     line-height: 10px;
     padding-left:10px;
 }
@@ -52,8 +58,8 @@
   }
 
   .input-text{
-    width:376px;
-    height: 42px;
+    width:330px;
+    /* height: 42px; */
     border: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -119,10 +125,10 @@
     width: 100%;
 }
 
-/* .login_Icon{
-    margin-top:2px;
-    padding-right: 2px;
-} */
+.login_Icon{
+    /* margin-top:12px; */
+    /* padding-right: 2px; */
+}
 
 
 .fontStyle{

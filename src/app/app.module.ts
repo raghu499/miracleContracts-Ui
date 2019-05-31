@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import {MatToolbarModule, MatIconModule, MatCheckboxModule,
-  MatInputModule,MatButtonModule,MatStepperModule,MatFormFieldModule,MatSelectModule} from '@angular/material';
+  MatInputModule,MatButtonModule,MatStepperModule,MatFormFieldModule,
+  MatTabsModule,MatSelectModule,MatTableModule} from '@angular/material';
 import { FooterComponent } from './footer/footer.component';
 import { MasterComponent } from './master/master.component';
 import { FormsModule } from '@angular/forms';
@@ -17,6 +18,7 @@ import { HomePageComponent } from './component/home-page/home-page.component';
 import { ContactsPageComponent } from './component/contacts-page/contacts-page.component';
 import { UploadControlComponent } from './component/upload-control/upload-control.component';
 import { FileDropModule } from 'ngx-file-drop';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,9 @@ import { FileDropModule } from 'ngx-file-drop';
     MatFormFieldModule,
     MatSelectModule,
     FileDropModule,
+    MatTableModule,
+    MatTabsModule,
+    Ng2SmartTableModule,
     MatStepperModule
   ],
   providers: [],
