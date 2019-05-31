@@ -123,3 +123,10 @@
     margin-top:2px;
     padding-right: 2px;
 } */
+
+
+.fontStyle{
+    font-weight: bold;
+    font-size: 25px;
+    padding-right: 10px;
+}
