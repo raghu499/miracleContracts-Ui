@@ -18,7 +18,6 @@ import { HomePageComponent } from './component/home-page/home-page.component';
 import { ContactsPageComponent } from './component/contacts-page/contacts-page.component';
 import { UploadControlComponent } from './component/upload-control/upload-control.component';
 import { FileDropModule } from 'ngx-file-drop';
-import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 @NgModule({
   declarations: [
@@ -49,7 +48,6 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
     FileDropModule,
     MatTableModule,
     MatTabsModule,
-    Ng2SmartTableModule,
     MatStepperModule
   ],
   providers: [],
