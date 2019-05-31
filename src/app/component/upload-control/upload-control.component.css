@@ -12,6 +12,7 @@
 
   }
 
+  
   .upload-btn-wrapper input[type=file] {
     /* font-size: 100px; */
     position: absolute;
@@ -25,7 +26,8 @@
 
   .drop-zone {
     margin: auto !important;
-    height: 60px !important;
+    height: 136px !important;
+    margin-top:35px;
     border: 2px dotted grey !important;
     border-radius: 30px !important;
     max-width: 100% !important;
